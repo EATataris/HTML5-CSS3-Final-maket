@@ -78,7 +78,6 @@
 .header-navigation {
     padding-bottom: 280px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 1170px;
 }
@@ -117,6 +116,10 @@
     fill: red;
 }
 
+.navigation-menu {
+    margin: 0 0 0 215px;   
+}
+
 .menu {
     list-style-type: none;
     width: 637px;
@@ -150,10 +153,15 @@
     margin: 16px 0 16px 63px;
 }
 
+
 .search-icon {
     display: block;
     float: left;
     margin: 16px 0 16px 28px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
 }
 
 .cart, .search {
@@ -257,12 +265,13 @@
 .btn:hover {
     color:  #998675;
     background-color: #ffffff;
+    box-shadow: 0px 0px 0px 2px #998675;
 }
 
 .btn:active {
-    box-shadow: inset 0px 5px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: none;
     background-color: red;
-    color: #ffffff;
+    color: #fff;
 }
 
 .arrow-next label, .arrow-prev label {
@@ -438,7 +447,7 @@
                 #fbfaf8;
 }
 
-.section-title {
+.sections-title {
     margin: 0 0 20px 0;
     font-family: Raleway;
     color:  #555555;
@@ -447,9 +456,9 @@
     text-align: center;
 }
 
-.ideas-realisation-text {
+.sections-text {
     width: 757px;
-    margin: 0 auto;
+    margin: 0 auto 35px auto;
     font-family: Montserrat;
     color:  #8c8c8c;
     font-size: 16px;
@@ -494,4 +503,235 @@
 
 .purchase .btn {
     margin: 0;
+}
+
+.latest-progects {
+    padding: 80px 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-navigation {
+    width: 605px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.projects-btn {
+    font-family: Montserrat;
+    color:  #8c8c8c;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: center;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #ebebeb;
+    box-sizing: border-box;
+    background-color:  rgba(17, 17, 17, 0);
+    cursor: pointer;
+}
+
+.projects-btn:first-child {
+    padding: 5px 25px 5px 25px;
+}
+
+.projects-btn:nth-child(2) {
+    padding: 5px 18px 5px 18px;
+}
+
+.projects-btn:nth-child(3) {
+    padding: 5px 20px 5px 20px;
+}
+
+.projects-btn:nth-child(4) {
+    padding: 5px 23px 5px 23px;
+}
+
+.projects-btn:nth-child(5) {
+    padding: 5px 23px 5px 23px;
+}
+
+.projects-btn:hover {
+    background-color:  #998675;
+    color: #fff;
+}
+
+.projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+}
+
+.projects {
+    margin-top: 30px;
+    position: relative;
+}
+
+.project-image {
+    display: block;
+}
+
+.project-txt {
+    padding: 27px 0 27px 30px;
+    background-color:  #fbfaf8;
+    position: relative;
+}
+
+.projects-title {
+    margin: 0 0 4px 0;
+    font-family: Raleway;
+    color:  #c7b29a;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.projects-details {
+    margin: 0;
+    font-family: Montserrat;
+    color:  #d1d1d1;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+}
+
+.project-txt:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 15px solid transparent;
+    border-bottom: 10px solid #fbfaf8;
+    position: absolute;
+    top: -25px;
+    left: 19px;
+}
+
+.project-link-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    top: 105px;
+    left: 144px;
+    cursor: pointer;
+    z-index: -1;
+}
+
+.project-lupa-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    top: 105px;
+    left: 198px;
+    cursor: pointer;
+    z-index: -1;
+}
+
+.link-icon, .lupa-icon {
+    display: block;
+    fill: #fff;
+}
+
+.link-icon:hover, .lupa-icon:hover {
+    fill: #c7b299;
+}
+
+.projects:hover .project-image {
+    filter: brightness(30%);
+}
+
+.projects:hover .project-txt {
+    background-color:  #362f2d;
+}
+
+.projects:hover .project-txt:before {
+    border-bottom: 10px solid #362f2d;
+}
+
+.projects:hover .projects-title {
+    color:  #ffffff;
+}
+
+.projects:hover .projects-details {
+    color:  #c7b299;
+}
+
+.projects:hover .project-link-btn  {
+    z-index: 1;
+}
+
+.projects:hover .project-lupa-btn  {
+    z-index: 1;
+}
+
+
+.video-poster {
+    padding: 208px 684px;
+    display: flex;
+    background-image: url(../img/video-poster.jpg);
+    background-repeat: no-repeat;
+    background-position: auto 100%;
+}
+
+.video-text {
+    width: 552px;
+}
+
+.play-btn {
+    margin: 0 auto 35px auto;
+    display: flex;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color:  rgba(0, 0, 0, 0.2);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.play-icon {
+    display: block;
+    fill: #fff;
+    margin: auto;
+}
+
+.play-icon:hover {
+    fill: #c7b299;
+}
+
+.video-title {
+    margin: 0 0 20px 0;
+    font-family: Raleway;
+    color:  #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.video-discription {
+    margin: 0 0 30px 0;
+    font-family: Montserrat;
+    color:  #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: center;
+}
+
+.video-time {
+    display: block;
+    font-family: Montserrat;
+    color:  #c7b299;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
 }
