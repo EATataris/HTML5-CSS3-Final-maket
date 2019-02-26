@@ -567,6 +567,12 @@
     color: #fff;
 }
 
+.projects-btn:active {
+    outline: none;
+    background-color: red;
+    color: #fff;
+}
+
 .projects-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -651,6 +657,11 @@
     fill: #c7b299;
 }
 
+.link-icon:active, .lupa-icon:active {
+    fill: red;
+}
+
+
 .projects:hover .project-image {
     filter: brightness(30%);
 }
@@ -712,6 +723,10 @@
 
 .play-icon:hover {
     fill: #c7b299;
+}
+
+.play-icon:active {
+    fill: red;
 }
 
 .video-title {
