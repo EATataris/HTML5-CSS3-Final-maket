@@ -124,6 +124,89 @@
     margin: 0 0 0 215px;   
 }
 
+.burger-menu {
+    display: flex;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    background: transparent;
+    display: none;
+    position: relative;
+    transition: .4s;
+}
+
+.burger-menu:hover .burger-menu-icon {
+    background: #c7b29a;
+}
+
+.burger-menu:hover .burger-menu-icon:before {
+    background: #c7b29a;
+}
+
+.burger-menu:hover .burger-menu-icon:after {
+    background: #c7b29a;
+}
+
+.burger-menu-icon {
+    position: relative;
+    background: rgba(255,255,255,1);
+    width: 100%;
+    height: 8px;
+    transition: .4s;
+}
+
+.burger-menu-icon:before, .burger-menu-icon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,1);
+    width: 100%;
+    height: 8px;
+    transition: .4s;
+}
+
+.burger-menu-icon:before {
+    top: -16px;
+}
+
+.burger-menu-icon:after {
+    top: 16px;
+}
+
+.menu-click {
+    display: none;
+}
+
+.menu-click:checked ~ .burger-menu .burger-menu-icon:before {
+    top: 0;
+}
+
+.menu-click:checked ~ .burger-menu .burger-menu-icon:after {
+    top: 0;
+}
+
+.menu-click:checked ~ .burger-menu .burger-menu-icon {
+    background: transparent;
+}
+
+
+.menu-click:checked ~ .burger-menu .burger-menu-icon:before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.menu-click:checked ~ .burger-menu .burger-menu-icon:after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+.menu-click:checked ~ .menu {
+    display: block;
+}
+
+
 .menu {
     list-style-type: none;
     width: 637px;
@@ -135,12 +218,13 @@
 }
 
 .menu-items a {
+    display: block;
     text-decoration: none;
     font-family: Montserrat;
     color:  #ffffff;
     font-size: 14px;
     font-weight: 300;
-    text-align: left;
+    text-align: center;
 }
 
 .menu-items a:hover {
@@ -150,6 +234,7 @@
 .menu-items a:active {
     color:  red;
 }
+
 
 .cart-link {
     display: block;
@@ -196,7 +281,11 @@ form {
     fill: #ffffff;
 }
 
-.cart-cion:hover, .search-icon:hover {
+.cart-link:hover .cart-icon {
+    fill: #c7b29a;
+}
+ 
+.search-icon:hover {
     fill: #c7b29a;
 }
 
@@ -649,8 +738,8 @@ form {
     outline: none;
     background-color: transparent;
     position: absolute;
-    top: 105px;
-    left: 144px;
+    top: 30%;
+    left: 40%;
     cursor: pointer;
     z-index: -1;
 }
@@ -660,8 +749,8 @@ form {
     outline: none;
     background-color: transparent;
     position: absolute;
-    top: 105px;
-    left: 198px;
+    top: 30%;
+    left: 55%;
     cursor: pointer;
     z-index: -1;
 }
@@ -1394,4 +1483,206 @@ form {
 
 .authors-menu-items a:active {
     color: red;
+}
+
+
+@media (max-width: 576px) {
+    
+    .container {
+        width: 100%;
+    }
+    
+    .main-header {
+        padding: 50px 25px;
+        background-size: cover;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+    }
+
+    .header-navigation {
+        padding: 0;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+    }
+    
+    .logo-icon {
+        position: absolute;
+    }
+    
+    .navigation-menu {
+        margin: 0;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+    
+    .burger-menu {
+        display: flex;
+    }
+    
+    .menu {
+        display: none;
+        width: 150%;
+        flex-direction: column;
+        align-self: center;
+        position: absolute;
+        top: 150%;
+        background: rgba(17, 17, 17, 0.9);
+    }
+    
+    .menu-items {
+        text-transform: uppercase;
+        line-height: 250%;
+    }
+    
+    .cart-icon, .cart-link, form {
+        display: none;
+    }
+
+    .main-header-slider {
+        display: none;
+    }
+    
+    .services-wrapper {
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .ideas-realisation {
+        display: none;
+    }
+    
+    .purchase {
+        padding: 30px 30px;
+    }    
+    
+    .latest-progects {
+       padding: 50px 25px;
+       flex-wrap:wrap;
+       flex-direction: initial;
+       justify-content: center;
+   }
+   
+    .projects-navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .projects-wrapper {
+        justify-content: center;
+    }
+    
+    .projects {
+        width: 100%;
+    }
+
+    .project-image {
+         width: 100%;
+    }
+    
+    video {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .video-text {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .exelent {
+        padding: 5% 2% 20% 2%;
+        background: url(../img/iPhone-in-hand.png) no-repeat 5% 100%, #fbfaf8;
+        background-size: 50%;
+    }
+    
+    .exelent-txt {
+        display: flex;
+        flex-wrap:wrap;
+        width: 100%;
+    }
+    
+    .exelent-txt .sections-title {
+        text-align: center;
+    }
+
+    .features {
+        padding-left: 50%;
+    }    
+    
+    .statistics {
+        display: none;
+    }
+
+    .recent-posts {
+        padding: 5% 5%;
+        justify-content: center;
+    }
+
+    .recent-posts  .sections-text {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .posts {
+        width: 100%;
+    }
+
+    .post-img {
+        width: 100%;
+    }
+
+    .left {
+        margin:5% 1% 0 40%;
+    }
+    
+    .right {
+        margin: 5% 40% 0 1%;
+    }
+    
+    .companies-wrappper {
+        padding: 5% 5%;
+        flex-wrap: nowrap;
+    }
+    
+    .companies-logos {
+        width: 20%;
+    }
+
+    .companies-logos img {
+        width: 100%;
+    }
+    
+    .main-footer {
+        width: 100%;
+    }
+
+    .footer-articles {
+        display: none;
+    }
+
+    .footer-copyright{
+        padding: 0;
+        justify-content: center;
+        padding: 5% 5%;
+    }
+    
+    .copyright-menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .authors-menu {
+        width: 100%;
+        justify-content: center;
+    }
+    
 }
