@@ -494,6 +494,16 @@ form {
 
 .services {
     width: 266px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services:after {
+    content: "";
+    width: 70px;
+    height: 0px;
+    border: 2px solid rgb(241,237,233);
 }
 
 
@@ -536,15 +546,13 @@ form {
     word-spacing: -0.92px;
 }
 
-.services-line {
-    fill: rgb(241,237,233);
-    display: block;
-    margin: 0 auto;
-}
-
-.services:hover .services-line, .services:hover h3, .services:hover .services-image {
+.services:hover .services-title, .services:hover .services-image {
     fill: #c7b299;
     color: #c7b299;
+}
+
+.services:hover:after {
+    border: 2px solid #c7b299;
 }
 
 .services:hover {
