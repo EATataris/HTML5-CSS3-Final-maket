@@ -506,10 +506,6 @@ form {
     border: 2px solid rgb(241,237,233);
 }
 
-.services:hover:after {
-    border: 2px solid #c7b299;
-}
-
 
 .services-image {
     display: block;
@@ -550,8 +546,13 @@ form {
     word-spacing: -0.92px;
 }
 
-.services:hover h3, .services:hover .services-image {
+.services:hover .services-title, .services:hover .services-image {
+    fill: #c7b299;
     color: #c7b299;
+}
+
+.services:hover:after {
+    border: 2px solid #c7b299;
 }
 
 .services:hover {
